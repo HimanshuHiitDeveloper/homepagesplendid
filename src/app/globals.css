@@ -1,27 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+ html{
+  font-size: 62.9%;
+ }
+
+.bg_col{
+ color: #464e63;
+    background-color: #f8f9fe;
+     font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.br{
+ border: 1px solid #babfc7;
+    border-radius: 11px;
+}
+.wd{
+  width: 210px;
+      height: 151px;
+          padding: 10px;
+}
+.head_col{
+   color: #464e63;
+   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.span_col{
+   border-radius: 49px;
+    font-weight: 400;
+    background-color: #c2d0ed69; 
+}
+ .wid_300px{
+width: 300px;
+  height: 100%;
+
+ }
+ .d_grid{
+  width: 90%;
+  height: 90%;
+   display: grid;
+grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    overflow-x: auto;
+ }
+
+ .br_left{
+   border-right: 1px solid #babfc7;
+ }
+ .head_span{
+    margin: 10px;
+    padding: 5px 12px;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #c2d0ed69;
+    border-radius: 49px;
+    font-weight: 400;
+ }
+
+   .stu_side_section{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+
+ }
+ .stu_side_section button{
+   padding: 1px 9px;
+    color: white;
+    border-radius: 9px;
+    font-weight: 600;
+    background-color: #166fff;
+
+ }
+
+ #filter{
+    border: 1px solid #828995;
+    background: #fff;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #000;
+   transition: all .5s ease-in-out;
+
+ }
+  #filter:hover{
+      background-color: #0d6efd;
+     color: #fff;
   }
+  .row_col_box {
+    border: 1px solid;
+    padding: 4px;
+    border-radius: 10px;
+}
+.row_box {
+    padding: 5px;
+    border-right: 1px solid #babfc7;
+}
+.colm_box {
+    padding: 5px;
+}
+.row_box img {
+    width: 25px;
+    height: 25px;
+}
+.colm_box img {
+    width: 25px;
+    height: 25px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ .aft{
+      padding: 3px;
+    position: relative;
+ }
+
+  .aft::before{
+ position: absolute;
+    content: '';
+    width: 88%;
+    height: 2px;
+    background-color: #d8deea;
+    bottom: 0;
+    filter: blur(1px);
+  }
+
+ 
+
+.profile_dropdown{
+  position: relative;
+  width: fit-content;
+}
+.profile_data{
+    position: absolute;
+    top: 38px;
+    left: -21px;
+    padding: 4px;
+    width: 100px;
+    border-radius: 10px;
+    font-weight: 800;
+     max-height: 0;
+    overflow: hidden;
+
+}
+.profile_data.active{
+    max-height: 400px;
+      background: #e2e8f7;
+    text-align: center;
+    color: #464e63 !important;
+
+}
+.profile_data li:hover{
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+}
+.profile_dropdown_btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+      border: 1px solid;
+   background-color: #f8f9fe;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 11px;
+
+}
+ .colm_counter{
+   width: 150px;
+    height: 48px;
+       background-color: #8a98b4;
+    border-radius: 10px;
+    display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+    position: absolute;
+    bottom: 41px;
+    right: 100px;
+  }
+  .sm_col{
+           width: 15px;
+    height: 23px;
+    border-radius: 2px;
+       background-color: #ffffff;
+  }
+
+
+.arrow_icon{
+      font-size: 3rem !important;
+  font-weight: 800;
+}
+
+@media(max-width:768px){
+    .stu_side_section
+    {
+            width: 99%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    }
 }
